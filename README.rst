@@ -15,8 +15,7 @@ phenotype
 
 
 
-
-Python Boilerplate contains all the boilerplate you need to create a Python package.
+Python library with syntax sugar classes/operations
 
 
 * Free software: MIT license
