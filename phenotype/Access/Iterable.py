@@ -1,28 +1,17 @@
-if __name__ == '__main__':
-    from sys import path        as __sys_path__
-    from os.path import abspath as __abs_path__
-    __sys_path__.insert(0, __abs_path__('..'))
-#     from Core.Get import ( 
-#         Item as __get_item__,
-#         Name as __get_name__,
-#         )
-#     from Core.Incrementer import Incrementer
-# else:
-from Core.Incrementer import Incrementer
-from Core.Get import ( 
-        Item as __get_item__,
-        Name as __get_name__,
-        )
-from Func.Partials import Head, Tail, Reduction
-from collections   import deque as __deque__
-from operator      import ( eq as __op_eq__)
-from itertools     import (
-    dropwhile   as __drop_while__,
-    islice      as __islice__,
-    zip_longest as __zip_longest__,
-    filterfalse as __filter_false__,
+from phenotype.Access import (
+   _item_access    as __get_item__,
+   _name_access    as __get_name__,
+   __INCREMENTER__ as Incrementer,
+   _fn_head        as Head,
+   _fn_tail        as Tail,
+   _fn_reduce      as Reduction,
+    __drop_while__,
+    __islice__,
+    __zip_longest__,
+    __filter_false__,
+    __deque__,
+    __op_eq__,
     )
-
 class Iterable:
     ''' '''
     __SENTINEL__ = object()
@@ -129,3 +118,4 @@ class Iterable:
     def Select(*indices):
         ''' '''
         return __get_item__(tuple(indices))
+__doc__ = 'Sequential-like accessors for iterables'

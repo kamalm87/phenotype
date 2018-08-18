@@ -1,4 +1,4 @@
-from collections.abc import ( Callable as __abc_callable__ )
+from phenotype.Core import __abc_callable__
 
 class _Identity(__abc_callable__):
     ''' '''

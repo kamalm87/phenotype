@@ -1,18 +1,10 @@
-if __name__ == '__main__':
-    from sys       import path    as __sys_path__
-    from os.path   import abspath as __abs_path__
-    __sys_path__.insert(0, __abs_path__('..'))
-from itertools import (
-    starmap     as __it_starmap__,
-    filterfalse as __it_filter_false__,
-    dropwhile   as __it_drop_while__,
-    takewhile   as __it_take_while__,
+from phenotype.Func import (
+    __it_starmap__,
+    __it_filter_false__,
+    __it_drop_while__,
+    __it_take_while__,
     )
-from functools import ( 
-    partial         as __ft_partial__,
-    update_wrapper  as __ft_update_wrapper__,
-    )
-from Func.Partials import Head as __func_head__, Tail as __func_tail__
+from phenotype.Func.Partials import Head as __func_head__, Tail as __func_tail__
 
 class _Iterable:
     ''' '''

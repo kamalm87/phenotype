@@ -1,4 +1,5 @@
-from operator import ( itemgetter as __op_item_getter__ )
+# from phenotype.Assignment import __op_item_getter__ 
+from operator        import  methodcaller as __op_method_caller__
 
 class WrappedParameter:
     ''' '''

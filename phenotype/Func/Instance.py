@@ -1,5 +1,7 @@
-from operator  import eq      as __op_eq__
-from functools import partial as __ft_partial__
+from phenotype.Func import (
+    __op_eq__,
+    __func_partial__,
+    )
 
 class Instance(property):
     ''' '''
@@ -27,7 +29,7 @@ class Instance(property):
     #2 CUSTOM
     def __predicate__(self, instance):
         ''' '''
-        return __ft_partial__( __op_eq__, instance )
+        return __func_partial__( __op_eq__, instance )
     def __match__(self, instance):
         ''' '''
         return filter( self.__predicate__(instance), self ) 

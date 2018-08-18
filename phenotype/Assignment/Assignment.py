@@ -1,5 +1,4 @@
-if __name__ == '__main__':
-    from operator import (methodcaller as __op_method_caller__)
+from operator        import  methodcaller as __op_method_caller__
 
 class Conditional(object):
     ''' '''

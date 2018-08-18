@@ -1,6 +1,6 @@
-from operator import ( methodcaller as __op_method_caller__ )
-
-Items  = __op_method_caller__('items')
-Keys   = __op_method_caller__('keys')
-Values = __op_method_caller__('values')
-def Create(name, *args, **kwargs): return __op_method_caller__(name, *args, **kwargs)
+from phenotype.Access import __op_method_caller__ as __INVOKER__
+__doc__ = 'Common extension methods invokers'
+Items  = __INVOKER__('items')
+Keys   = __INVOKER__('keys')
+Values = __INVOKER__('values')
+def Create(name, *args, **kwargs): return __INVOKER__(name, *args, **kwargs)

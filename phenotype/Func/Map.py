@@ -1,16 +1,11 @@
-if __name__ == '__main__':
-    from sys       import path        as __sys_path__
-    from os.path   import abspath as __abs_path__
-    __sys_path__.insert(0, __abs_path__('..'))
-
 from collections.abc       import Callable
 from functools import reduce as __ft_reduce__
-from Access.Item           import Names, Items
-from Assignment.Assignment import IfElse
-from Core.Auxiliary        import Apply
-from Core.Components       import Executer
-from Func.Partials         import Reduction, Head, Tail
-from Func.Invoker          import Invoker
+from phenotype.Access.Item import ( Names, Items )
+from phenotype.Assignment.Assignment import IfElse
+from phenotype.Core.Auxiliary        import Apply
+from phenotype.Core.Components       import Executer
+from phenotype.Func.Partials         import Reduction, Head, Tail
+from phenotype.Func.Invoker          import Invoker
 
 class Selector:
     ''' '''

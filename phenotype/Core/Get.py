@@ -1,9 +1,8 @@
-from operator import ( 
-    attrgetter as __op_attr_getter__,
-    itemgetter as __op_item_getter__,)
-from .Auxiliary import (
-    ReturnAs  as __return_as__,
-    TryExcept as __try_except__,)
+from phenotype.Core import (
+    __op_attr_getter__,
+    __op_item_getter__,
+    __return_as__,
+    __try_except__,)
 #2 LOCAL GLOBALS
 __try__ = __try_except__.Unary
 #2 PUBLIC INTERFACE

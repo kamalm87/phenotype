@@ -1,22 +1,10 @@
-if __name__ == '__main__':
-    from sys import path        as __sys_path__
-    from os.path import abspath as __abs_path__
-    __sys_path__.insert(0, __abs_path__('..'))
-    # from Core.Get import ( 
-    #     Item as __get_item__,
-    #     Name as __get_name__,
-    #     )
-# else:
-from Core.Get import ( 
-    Item as __get_item__,
-    Name as __get_name__,
+from phenotype.Access import (
+    _item_access as __get_item__,
+    _name_access as __get_name__,
+    _fn_head     as __func_head__,
+    _fn_tail     as __func_tail__,
+    _fn_reduce   as __func_reduce__ ,
     )
-from Func.Partials import ( 
-        Head      as __func_head__,
-        Tail      as __func_tail__,
-        Reduction as __func_reduce__,
-        )
-
 class Names:
     @classmethod
     def Get(cls,name,default=None):
@@ -68,3 +56,4 @@ class Items:
         ''' '''
         def _select(items): return __get_item__(tuple(indices))(items)
         return _select
+__doc__ = 'Index and attribute accessor static classes'

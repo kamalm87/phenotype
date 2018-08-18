@@ -1,13 +1,6 @@
-if __name__ == '__main__':
-    from Functions import (
-        Filtered as __fn_filtered__,
-        Items    as __fn_items__,
-        )
-else:
-    from .Functions import (
-        Filtered as __fn_filtered__,
-        Items    as __fn_items__,
-        )
+from phenotype.Assignment.Functions import ( 
+    Filtered as __fn_filtered__ ,
+    Items    as __fn_items__,)
 
 class Flow(dict):
     ''' '''

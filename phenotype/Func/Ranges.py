@@ -1,13 +1,8 @@
-if __name__ == '__name__':
-    from sys       import path        as __sys_path__
-    from os.path   import abspath as __abs_path__
-    __sys_path__.insert(0, __abs_path__('..'))
-from collections.abc import Callable as __abc_callable__
-from itertools import ( 
-    starmap     as __it_starmap__,
-    repeat      as __it_repeat__,
-    zip_longest as __it_zip_longest__,
-    )
+from phenotype.Func import (
+    __abc_callable__,
+    __it_starmap__,
+    __it_repeat__,
+    __it_zip_longest__,)
 
 class RangeParameter(__abc_callable__):
     ''' '''
@@ -50,7 +45,7 @@ class _Anchor:
     def _Anchor(anchor):
         ''' '''
         raise NotImplementedError
-        
+
     @classmethod
     def StartEnd(cls, binary_fn, start, end, step=None):
         ''' '''

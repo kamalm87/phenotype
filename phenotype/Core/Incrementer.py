@@ -1,5 +1,8 @@
-from functools import ( partial as __ft_partial__)
-from operator  import ( __iadd__, __lt__ )
+from phenotype.Core import ( 
+    __ft_partial__,
+    __iadd__, 
+    __lt__ ,
+    )
 
 class Incrementer(object):
     ''' '''

@@ -1,15 +1,12 @@
-from functools import ( 
-    reduce         as __func_reduce__,
-    )
-from operator import (
+from phenotype.Func import (
+    __func_reduce__,
     __ior__,
     __imul__,
     __isub__,
     __iadd__,
     __concat__,
     __itruediv__,
-    )
-from collections.abc import Callable as __abc_callable__
+    __abc_callable__,)
 
 class _Aggregator(__abc_callable__):
     ''' '''
@@ -19,11 +16,13 @@ class _Aggregator(__abc_callable__):
     def __call__(self,*items):
         ''' '''
         return __func_reduce__(self.func,items) if items else items
+
 class Aggregator(_Aggregator):
     ''' '''
     def __init__(self, func):
         ''' '''
         super().__init__(func)
+
 IOR    = Aggregator(__ior__)
 MUL    = Aggregator(__imul__)
 CONCAT = Aggregator(__concat__)

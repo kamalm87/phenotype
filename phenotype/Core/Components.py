@@ -1,14 +1,9 @@
-if __name__ == '__main__':
-    from sys import path        as __sys_path__
-    from os.path import abspath as __abs_path__
-    __sys_path__.insert(0, __abs_path__('..'))
-    # print(__sys_path__)
-from functools         import ( partial  as __ft_partial__, )
-from itertools         import ( repeat   as __it_repeat__, )
-from operator          import ( truth    as __op_truth__, )
-from Assignment.Branch import Branch as __assignment_branch__
-from .Defaults import Nullable
-
+from phenotype.Core import (
+    __ft_partial__,
+    __it_repeat__,
+    __op_truth__,
+    __pt_branch__ as __assignment_branch__,
+    Nullable,)
 #2 DEFAULTS
 class _Composer(object):
     ''' '''

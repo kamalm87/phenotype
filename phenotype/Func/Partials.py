@@ -1,9 +1,9 @@
-from functools import ( 
-    partial        as __ft_partial__,
-    update_wrapper as __ft_update_wrapper__,
-    reduce         as __ft_reduce__,
+from phenotype.Func import (
+    __func_partial__,
+    __func_update_wrapper__,
+    __func_reduce__,
+    __abc_callable__,
     )
-from collections.abc import Callable as __abc_callable__
 #1 PARTIALS
 #2 BASE CLASS
 class _Partial(__abc_callable__):
@@ -17,7 +17,7 @@ class _Partial(__abc_callable__):
     @classmethod
     def __head__(cls, function, *args, **kwargs):
         ''' '''
-        return __ft_update_wrapper__( __ft_partial__(function, *args, **kwargs), function )
+        return __func_update_wrapper__( __func_partial__(function, *args, **kwargs), function )
     @classmethod
     def __tail__(cls, function, *w_args, **kwargs):
         ''' '''
@@ -25,7 +25,7 @@ class _Partial(__abc_callable__):
             new_kwargs = kwargs.copy()
             new_kwargs.update(kwargs)
             return function( *args, *w_args, **new_kwargs)
-        return __ft_update_wrapper__( _rpartial, function )
+        return __func_update_wrapper__( _rpartial, function )
     def __call__(self, *args, **kwargs):
         ''' '''
         return self.func(*args, **kwargs)
@@ -56,7 +56,7 @@ class Reduction(list):
     @classmethod
     def __reduction__(cls, sequence, item=None):
         ''' '''
-        def _reduce(*args): return __ft_reduce__(cls.__step__, *args)
+        def _reduce(*args): return __func_reduce__(cls.__step__, *args)
         return _reduce(sequence, item)
     @classmethod
     def Reduce(cls, item, *function_sequence):
