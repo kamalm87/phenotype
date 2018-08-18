@@ -12,3 +12,5 @@ deploy:
     tags: true
     repo: dospac87/phenotype
     python: 3.7
+    dist: xenial
+    sudo: true
